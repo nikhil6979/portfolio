@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nikhil Nishad | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Nikhil Nishad</h1>
+    <p>Software Developer & UI Designer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm <strong>Nikhil Nishad</strong>, a Computer Science Engineering student at <strong>Srinath University</strong> (2022–2026), passionate about developing impactful software and designing clean, user-friendly interfaces.
+      I enjoy working with both frontend and backend technologies, and I'm constantly learning to improve my skills in <strong>Python, JavaScript, and full-stack development</strong>.
+    </p>
+    <p>
+      With experience in internships, hackathons, and real-world projects, I’ve learned how to turn ideas into working applications.
+      I’m particularly interested in combining logic and creativity—which is why I aim to become a <strong>software developer and UI designer</strong> who builds intuitive and engaging digital experiences.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python, C, C++, Java</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Node.js, Git</li>
+      <li>Pandas, NumPy, Jupyter Notebook</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project"><h3>Full Stack Web Development Intern</h3><p>Built a website to improve parent-teacher communication using HTML, CSS, JS, and Node.js.</p></div>
+    <div class="project"><h3>Hack Horizon 2024</h3><p>Developed a plant species recognition app using real-time image inputs during a hackathon.</p></div>
+    <div class="project"><h3>Kidden – Kindergarten Web Page</h3><p>Created a site for parents to view their child's teachers using HTML, CSS, JS.</p></div>
+    <div class="project"><h3>Lake Cleaning RC Boat</h3><p>Built a remote-controlled boat for environmental cleaning purposes.</p></div>
+    <div class="project"><h3>Face Detection Using NumPy</h3><p>Implemented basic face detection using Python and NumPy image processing libraries.</p></div>
+    <div class="project"><h3>AI Chatbot using API</h3><p>Built a chatbot interface powered by OpenRouter API with responsive UI and real-time interactions.</p></div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Best Intern Award at Paultech Software Services</li>
+      <li>2nd Place at Tarush 2K24 – Model Presentation</li>
+      <li>Winner – Science Exhibition (RC Boat Project)</li>
+    </ul>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <p>Upload your certificates below. They will appear as a gallery:</p>
+    <input type="file" accept="image/*" multiple onchange="previewCertificates(event)" />
+    <div id="certificateGallery"></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:nikhilnishad545@gmail.com">nikhilnishad545@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/nikhil6979" target="_blank">github.com/nikhil6979</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/nikhil-nishad-b18380228" target="_blank">LinkedIn Profile</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nikhil Nishad</p>
+  </footer>
+
+  <script>
+    function previewCertificates(event) {
+      const gallery = document.getElementById('certificateGallery');
+      gallery.innerHTML = '';
+      Array.from(event.target.files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          img.alt = "Certificate";
+          img.className = "certificate-img";
+          gallery.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+  </script>
+</body>
+</html>

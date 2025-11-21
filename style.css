@@ -1,0 +1,123 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1f1f1f;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #66fcf1;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #66fcf1;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #c0c0c0;
+}
+
+header nav {
+  margin-top: 1rem;
+}
+
+header nav a {
+  margin: 0 1rem;
+  color: #66fcf1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #66fcf1;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+section h2 {
+  border-bottom: 2px solid #66fcf1;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #66fcf1;
+  font-size: 1.8rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+.project {
+  margin-bottom: 1.5rem;
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #66fcf1;
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  background-color: #2a2a2a;
+}
+
+#certificateGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.certificate-img {
+  width: 200px;
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid #66fcf1;
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+  transition: transform 0.3s;
+}
+
+.certificate-img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1f1f1f;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+a {
+  color: #66fcf1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
